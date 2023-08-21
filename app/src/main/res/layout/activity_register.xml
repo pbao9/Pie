@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginwphone"
+    tools:context=".GUI.RegisterActivity">
+    <TextView
+        android:id="@+id/back"
+        android:drawableLeft="@drawable/ic_back"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="55sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/txtText"
+        android:text="Đăng Ký"
+        android:layout_toRightOf="@id/back"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/bevietnampro_bold"
+        android:layout_width="match_parent"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="55sp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="Số di động"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="35sp"
+        android:layout_below="@id/txtText"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/bevietnampro_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTextSDT"/>
+
+    <TextView
+        android:text="+84"
+        android:layout_marginTop="30sp"
+        android:background="@drawable/round_edittext"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/txtTextSDT"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/bevietnampro_light"
+        android:layout_width="50dp"
+        android:paddingTop="15dp"
+        android:textAlignment="center"
+        android:layout_height="50dp"
+        android:id="@+id/txtCountry"/>
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:maxLength="10"
+        android:layout_width="250dp"
+        android:inputType="number"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtTextSDT"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/txtCountry"
+        android:background="@drawable/round_edittext"
+        android:hint="09 123 4567"
+        android:paddingStart="15dp"
+        android:textColorHint="#B5B5B5" />
+    
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/bevietnampro_bold"
+        android:drawableLeft="@drawable/ic__phone"
+        android:text="Tiếp tục với số điện thoại"
+        android:textAlignment="center"
+        android:textColor="#000000"/>
+
+    
+</RelativeLayout>

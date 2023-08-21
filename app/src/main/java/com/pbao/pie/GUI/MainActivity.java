@@ -1,4 +1,4 @@
-package com.pbao.pie;
+package com.pbao.pie.GUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,27 +6,45 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class SplashActivity extends AppCompatActivity {
+import com.pbao.pie.R;
 
+public class MainActivity extends AppCompatActivity {
+    Button btnLogin, btnRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_main);
+        addView();
+        transparentStatusbar();
 
-        /* Màn hình chờ 2s khi mở ứng dụng */
-        new Handler().postDelayed(new Runnable() {
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
-        },2000);
-        transparentStatusbar();
+        });
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void addView() {
+        btnLogin = findViewById(R.id.btnLogin);
+        btnRegister = findViewById(R.id.btnRegister);
     }
     private void transparentStatusbar(){
         if (Build.VERSION.SDK_INT>=28 && Build.VERSION.SDK_INT<34){
